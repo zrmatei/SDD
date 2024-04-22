@@ -1,0 +1,3 @@
+50,Spalare Masina,Dorel,13.2,32
+50,Spalare,Dorel,13.2,32
+21,Spalare Poarta,Floricel,11.2,19

@@ -1,0 +1,3 @@
+﻿  hash_servicii.c
+C:\Users\Razvan\source\repos\hash_servicii\hash_servicii\hash_servicii.c(144,6): warning C4101: 'nr': unreferenced local variable
+  hash_servicii.vcxproj -> C:\Users\Razvan\source\repos\hash_servicii\x64\Debug\hash_servicii.exe
