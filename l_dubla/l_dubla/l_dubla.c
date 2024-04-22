@@ -117,6 +117,23 @@ void sterg(nodls** cap, nodls** coada, int prag) {
 	}
 }
 
+void convertVector(nodls* cap, Farmacie** vect, int* poz, char* n_farmac) {
+	nodls* temp = cap;
+	int contor = 0;
+	while (temp != NULL) {
+		if (strcmp(temp->info->nume, n_farmac) == 0) {
+			vect[*poz] = (Farmacie*)malloc(sizeof(Farmacie));
+			vect[*poz]->nume = (char*)malloc(sizeof(char) * (strlen(temp->info->nume) + 1));
+			strcpy(vect[*poz]->nume, temp->info->nume);
+			vect[*poz]->adresa = (char*)malloc(sizeof(char) * (strlen(temp->info->adresa) + 1));
+			strcpy(vect[*poz]->adresa, temp->info->adresa);
+			(*poz)++;
+		}
+		temp = temp->next;
+	}
+}
+
+
 int main() {
 	
 	nodls* cap = NULL;
@@ -150,7 +167,23 @@ int main() {
 	travers(cap);
 	determin(cap, 50);
 	printf("//////////////////////////////////\n");
-	sterg(&cap, &coada, 5);
+	//sterg(&cap, &coada, 5);
 	travers(cap);
+
+	printf("\n-------conversie-----------");
+	int nr = 0;
+	Farmacie** vect = (Farmacie**)malloc(10 * sizeof(Farmacie*)); 
+	convertVector(cap, vect, &nr, "Dorel");
+	for (int i = 0; i < nr; i++)
+		printf("\n%s, %s ", vect[i]->nume, vect[i]->adresa);
+	for (int i = 0; i < nr; i++) {
+		free(vect[i]->nume);
+		free(vect[i]->adresa);
+		free(vect[i]);
+	}
+	free(vect);
+
+
+
 	dezaloc(cap);
 }

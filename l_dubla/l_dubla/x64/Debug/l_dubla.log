@@ -1,3 +1,4 @@
 ﻿  l_dubla.c
-C:\Users\Razvan\source\repos\l_dubla\l_dubla\l_dubla.c(138,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Razvan\source\repos\l_dubla\l_dubla\l_dubla.c(125,54): warning C4047: '=': 'Farmacie *' differs in levels of indirection from 'Farmacie **'
+C:\Users\Razvan\source\repos\l_dubla\l_dubla\l_dubla.c(155,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   l_dubla.vcxproj -> C:\Users\Razvan\source\repos\l_dubla\x64\Debug\l_dubla.exe
